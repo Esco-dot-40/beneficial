@@ -1,0 +1,301 @@
+You are acting as a Principal Software Architect, Senior Security Engineer, Senior DevOps Engineer, Senior QA Engineer, and SaaS Product Auditor simultaneously.
+
+I am providing a complete project tree for my application.
+
+Your task is NOT to explain what the project does.
+
+Your task is to aggressively audit the architecture and identify every possible flaw, weakness, bottleneck, security risk, scalability issue, maintenance problem, technical debt concern, deployment risk, business risk, and architectural mistake.
+
+Think like someone hired specifically to destroy this project during due diligence before an acquisition.
+
+Analyze the project tree and produce a report containing:
+
+# 1. Architectural Analysis
+
+Determine:
+
+* Overall application architecture
+* Backend architecture
+* Frontend architecture
+* Database architecture
+* Extension/browser integration architecture
+* Electron architecture
+* API architecture
+* Authentication architecture
+* Licensing architecture
+* Deployment architecture
+
+Explain how components appear to interact.
+
+Identify architectural smells.
+
+Identify hidden coupling between modules.
+
+Identify circular dependency risks.
+
+Identify single points of failure.
+
+Identify areas that violate separation of concerns.
+
+Identify components that appear to have grown beyond their intended responsibility.
+
+---
+
+# 2. Scalability Audit
+
+Determine:
+
+* What breaks at 100 users
+* What breaks at 1,000 users
+* What breaks at 10,000 users
+* What breaks at 100,000 users
+
+Identify:
+
+* CPU bottlenecks
+* Memory bottlenecks
+* Database bottlenecks
+* Queue bottlenecks
+* Extension communication bottlenecks
+* Browser automation bottlenecks
+* Redis bottlenecks
+* Websocket bottlenecks
+
+Estimate which components become the first scaling pain points.
+
+---
+
+# 3. Security Audit
+
+Assume the application will be attacked.
+
+Identify:
+
+* Credential exposure risks
+* Session theft risks
+* JWT vulnerabilities
+* API abuse risks
+* CSRF risks
+* XSS risks
+* RCE possibilities
+* Electron security issues
+* Browser extension risks
+* IPC vulnerabilities
+* Token storage weaknesses
+* Secrets management problems
+* Environment variable issues
+* Update mechanism risks
+* License bypass possibilities
+* Replay attack possibilities
+
+For each issue provide:
+
+* Severity
+* Exploitation path
+* Recommended fix
+
+---
+
+# 4. Electron-Specific Audit
+
+Review:
+
+* Main process
+* Renderer process
+* IPC communication
+* Auto-updater
+* Local storage
+* Session persistence
+* Browser automation
+* Extension communication
+
+Identify:
+
+* Privilege escalation opportunities
+* Sandboxing issues
+* Unsafe IPC channels
+* Dangerous preload exposure
+* Security anti-patterns
+
+---
+
+# 5. Browser Extension Audit
+
+Review:
+
+* Manifest structure
+* Background scripts
+* Content scripts
+* Message passing
+* Storage usage
+* Permissions
+
+Identify:
+
+* Excessive permissions
+* Security weaknesses
+* Session handling risks
+* Cross-site communication flaws
+* Cloudflare detection risks
+* Browser policy compliance issues
+
+---
+
+# 6. Database Audit
+
+Determine:
+
+* Database design quality
+* Missing indexes
+* Future migration risks
+* Data consistency risks
+* Concurrency issues
+* Multi-user problems
+* Orphaned data risks
+
+Identify tables or models likely to become problematic.
+
+---
+
+# 7. DevOps Audit
+
+Review:
+
+* Docker setup
+* Build pipeline
+* CI/CD readiness
+* Environment configuration
+* Secret management
+* Monitoring
+* Logging
+* Error reporting
+* Backup strategy
+
+Identify:
+
+* Production deployment risks
+* Disaster recovery weaknesses
+* Downtime risks
+* Rollback issues
+
+---
+
+# 8. Code Organization Audit
+
+Identify:
+
+* Dead code
+* Duplicate code
+* God objects
+* Overly large modules
+* Misplaced responsibilities
+* Refactoring candidates
+
+Rank the worst offenders.
+
+---
+
+# 9. Hidden Risks
+
+Find issues developers typically miss:
+
+* Technical debt bombs
+* Vendor lock-in risks
+* Third-party dependency risks
+* Licensing issues
+* Package supply chain risks
+* Update risks
+* Compliance risks
+* Future maintenance nightmares
+
+Specifically identify problems that may not become visible until 6-24 months after launch.
+
+---
+
+# 10. Business Viability Risks
+
+Based solely on the project structure:
+
+Identify:
+
+* Monetization risks
+* Support burden risks
+* User onboarding risks
+* Churn risks
+* Infrastructure cost risks
+* Abuse risks
+* Fraud risks
+
+Explain how these technical decisions could impact business growth.
+
+---
+
+# 11. Missing Components
+
+Identify important systems that appear to be absent such as:
+
+* Monitoring
+* Analytics
+* Rate limiting
+* Audit logging
+* Feature flags
+* Admin dashboard
+* User management
+* Billing infrastructure
+* Backup infrastructure
+* Security monitoring
+
+---
+
+# 12. Risk Matrix
+
+Create a table containing:
+
+| Issue | Severity | Likelihood | Impact | Priority |
+| ----- | -------- | ---------- | ------ | -------- |
+
+Rank the top 50 most important issues.
+
+---
+
+# 13. Refactor Roadmap
+
+Produce:
+
+* Immediate fixes (1-7 days)
+* Short-term fixes (30 days)
+* Mid-term fixes (90 days)
+* Long-term improvements (6-12 months)
+
+Order recommendations by ROI.
+
+---
+
+# 14. Brutal Assessment
+
+Give an unfiltered assessment:
+
+* What would concern a senior engineer most?
+* What would concern an investor most?
+* What would concern a security auditor most?
+* What would concern a future maintainer most?
+
+Do not be polite.
+
+Do not assume the project is well-designed.
+
+Actively search for hidden failure points and challenge all architectural decisions.
+
+If evidence is missing, explicitly state:
+
+"Insufficient evidence from tree structure alone."
+
+Do not invent facts.
+
+Distinguish between:
+
+* Confirmed issues
+* Probable issues
+* Possible issues
+
+Confidence score each finding from 1-10.
